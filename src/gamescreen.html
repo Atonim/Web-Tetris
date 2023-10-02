@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <title>Tetris</title>
+</head>
+
+<body>
+  <div class="main">
+    <div class="header">
+      <h1>TETRIS</h1>
+    </div>
+    <div id="root">
+
+      <canvas id="canvas"></canvas>
+      <div class="aside">
+        <div id="username">Player: Unknown</div>
+        <br>
+        <br>
+        <div id="level">Level: 1</div>
+        <br>
+        <br>
+        <div id="score">Score: 0</div>
+        <br>
+        <br>
+        <div>Next:</div>
+        <div class="nextPiece">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p>Control:</p>
+        <br>
+        <p>A / Left Arrow - Move Left</p>
+        <br>
+        <p>D / Right Arrow - Move Right</p>
+        <br>
+        <p>S / Down Arrow - Move Down</p>
+        <br>
+        <p>W / Up Arrow - Rotate</p>
+        <br>
+        <p>Enter - Pause / Resume</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+<script type="module" src="./index.js"></script>
+
+</html>
