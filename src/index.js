@@ -1,18 +1,31 @@
-import Game from './game.js';
-import View from './view.js';
-import Controller from './controller.js'
-import Music from './music.js';
+let usernameElement = document.getElementById("username")
+let startButtonElement = document.getElementById("startButton")
+let formElement = document.getElementById("form")
 
-const root = document.querySelector('#root');
-const game = new Game();
-const music = new Music();
-const view = new View(root, 320, 640, 20, 10);
-const controller = new Controller(game, view, music);
+usernameElement.addEventListener("input", checkUsernameInput)
+formElement.addEventListener("submit", saveUsername)
 
-window.game = game;
-window.view = view;
-window.controller = controller;
-window.music = music;
+function checkUsernameInput(event) {
+  if (usernameElement.value.length === 0) {
+    startButtonElement.setAttribute("disabled", "disable")
+  } else {
+    startButtonElement.removeAttribute("disabled")
+  }
+}
 
+function saveUsername(event) {
+  localStorage["tetris.username"] = usernameElement.value
+  if (localStorage["tetris.scoreTable"] === undefined) {
+    localStorage["tetris.scoreTable"] = JSON.stringify([])
+  }
+}
 
+function readUsername(event) {
+  if (localStorage["tetris.username"]) {
+    usernameElement.value = localStorage["tetris.username"];
+  }
 
+}
+
+readUsername();
+checkUsernameInput();

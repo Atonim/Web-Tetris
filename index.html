@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap"
     rel="stylesheet">
+  <link rel="icon" type="images/x-icon" href="/src/assets/favicon/favicon.ico">
   <title>Tetris</title>
 </head>
 
@@ -18,11 +19,12 @@
     <!--<img src="assets/images/preview-picture.png" alt="Tetris" width="800px" height="549px">-->
     <div class="container">
       <p>Welcome to Tetris!</p>
-      <form id="form" action="./src/gamescreen.html" method="get">
+      <form id="form" action="./src/main/gamescreen.html" method="get">
 
         <br><br>
         <label>
-          <input class="usernameInput" id="username" placeholder="Username" autocomplete="on">
+          <input class="usernameInput" id="username" placeholder="Username" autocomplete="on" minlength="3"
+            maxlength="10" pattern="[A-Za-zа-яА-ЯёЁ\-]+">
         </label>
         <br><br>
         <input class="startButton" disabled="disabled" id="startButton" type="submit" value="START">
@@ -31,6 +33,6 @@
 
   </div>
 </body>
-<script type="module" src="./src/start.js"></script>
+<script type="module" src="./src/index.js"></script>
 
 </html>
